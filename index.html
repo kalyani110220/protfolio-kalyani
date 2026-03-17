@@ -1,64 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Semantic Form Practice</title>
+<meta charset="UTF-8">
+<title>Styled Form</title>
+
+<style>
+
+/* Element selector */
+body {
+    font-family: Arial;
+    background-color: #f2f2f2;
+}
+
+/* ID selector */
+#title {
+    text-align: center;
+    color: darkblue;
+}
+
+/* Class selector */
+.form-box {
+    background-color: white;
+    width: 300px;
+    margin: 50px auto; /* center the form */
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* Input styling */
+input {
+    width: 100%;
+    padding: 8px;       /* inner space */
+    margin: 10px 0;     /* space between inputs */
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Student Registration</h1>
-    </header>
+<header>
+    <h1 id="title">Registration Form</h1>
+</header>
 
-    <main>
+<main>
 
-        <section>
-            <h2>Registration Form</h2>
+<section class="form-box">
 
-            <form>
+<form onsubmit="showMessage(event)">
 
-                <label for="name">Full Name:</label><br>
-                <input type="text" id="name" name="name"><br><br>
+<label>Name:</label>
+<input type="text" required>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br><br>
+<label>Email:</label>
+<input type="email" required>
 
-                <label for="password">Password:</label><br>
-                <input type="password" id="password" name="password"><br><br>
+<label>Password:</label>
+<input type="password" required>
 
-                <label>Gender:</label><br>
-                <input type="radio" name="gender"> Male
-                <input type="radio" name="gender"> Female<br><br>
+<button type="submit">Register</button>
 
-                <label>Skills:</label><br>
-                <input type="checkbox"> HTML
-                <input type="checkbox"> CSS
-                <input type="checkbox"> JavaScript<br><br>
+</form>
 
-                <label for="course">Course:</label><br>
-                <select id="course">
-                    <option>Web Development</option>
-                    <option>Data Science</option>
-                    <option>Cyber Security</option>
-                </select><br><br>
+<p id="successMessage"></p>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" rows="4" cols="30"></textarea><br><br>
+</section>
 
-                <input type="submit" value="Register">
+</main>
 
-            </form>
-
-        </section>
-
-    </main>
-
-    <footer>
-        <p>Practice HTML Semantic Tags</p>
-    </footer>
+<script>
+function showMessage(event) {
+    event.preventDefault();
+    document.getElementById("successMessage").innerText = "✅ Registration Successful!";
+}
+</script>
 
 </body>
-
 </html>
