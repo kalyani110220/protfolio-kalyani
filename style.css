@@ -1,0 +1,61 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Flex container */
+.container {
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    align-items: center;      /* vertical center */
+    height: 80vh;
+}
+
+/* Form box */
+.form-box {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Inputs */
+input {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* Button */
+button {
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: darkblue;
+}

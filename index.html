@@ -1,88 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Styled Form</title>
-
-<style>
-
-/* Element selector */
-body {
-    font-family: Arial;
-    background-color: #f2f2f2;
-}
-
-/* ID selector */
-#title {
-    text-align: center;
-    color: darkblue;
-}
-
-/* Class selector */
-.form-box {
-    background-color: white;
-    width: 300px;
-    margin: 50px auto; /* center the form */
-    padding: 20px;
-    border: 1px solid #ccc;
-}
-
-/* Input styling */
-input {
-    width: 100%;
-    padding: 8px;       /* inner space */
-    margin: 10px 0;     /* space between inputs */
-}
-
-/* Button styling */
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: blue;
-    color: white;
-    border: none;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <title>Flexbox Form</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1 id="title">Registration Form</h1>
-</header>
+    <header>
+        <h1>Registration Form</h1>
+    </header>
 
-<main>
+    <main class="container">
 
-<section class="form-box">
+        <section class="form-box">
 
-<form onsubmit="showMessage(event)">
+            <form onsubmit="showMessage(event)">
 
-<label>Name:</label>
-<input type="text" required>
+                <label>Name</label>
+                <input type="text" required>
 
-<label>Email:</label>
-<input type="email" required>
+                <label>Email</label>
+                <input type="email" required>
 
-<label>Password:</label>
-<input type="password" required>
+                <label>Password</label>
+                <input type="password" required>
 
-<button type="submit">Register</button>
+                <button type="submit">Register</button>
 
-</form>
+            </form>
 
-<p id="successMessage"></p>
+            <p id="successMessage"></p>
 
-</section>
+        </section>
 
-</main>
+    </main>
 
-<script>
-function showMessage(event) {
-    event.preventDefault();
-    document.getElementById("successMessage").innerText = "✅ Registration Successful!";
-}
-</script>
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            document.getElementById("successMessage").innerText = "✅ Registered Successfully!";
+        }
+    </script>
 
 </body>
+
 </html>
