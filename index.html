@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Flexbox Form</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Web Page</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Registration Form</h1>
-    </header>
+<!-- Header -->
+<header>
+    <h1>My Responsive Page</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
 
-    <main class="container">
+<!-- Main content -->
+<main class="container">
 
-        <section class="form-box">
+    <!-- Grid layout -->
+    <section class="content">
+        <article>
+            <h2>Main Article</h2>
+            <p>This is the main content area. You can write anything here.</p>
+        </article>
+        <aside>
+            <h2>Sidebar</h2>
+            <p>This is the sidebar content. Links, ads, or widgets go here.</p>
+        </aside>
+    </section>
 
-            <form onsubmit="showMessage(event)">
+    <!-- Flexbox section -->
+    <section class="cards">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </section>
 
-                <label>Name</label>
-                <input type="text" required>
+</main>
 
-                <label>Email</label>
-                <input type="email" required>
-
-                <label>Password</label>
-                <input type="password" required>
-
-                <button type="submit">Register</button>
-
-            </form>
-
-            <p id="successMessage"></p>
-
-        </section>
-
-    </main>
-
-    <script>
-        function showMessage(event) {
-            event.preventDefault();
-            document.getElementById("successMessage").innerText = "✅ Registered Successfully!";
-        }
-    </script>
+<!-- Footer -->
+<footer>
+    <p>© 2026 My Responsive Webpage</p>
+</footer>
 
 </body>
-
 </html>
